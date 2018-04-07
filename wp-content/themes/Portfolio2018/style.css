@@ -3,3 +3,376 @@ Theme Name: Portfolio2018
 Author: Thomas Cober
 Author URI: http://thomascober.com
 */
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+/* Variables */
+/* Prism Animation */
+.diamondchange {
+  -webkit-animation: prism 1s infinite;
+  /* Safari and Chrome */
+  -moz-animation: prism 1s infinite;
+  /* Firefox */
+  animation: prism 1s; }
+
+.outside {
+  -webkit-animation: outside 1s infinite;
+  -moz-animation: outside 1s infinite;
+  animation: outside 1s; }
+
+.inside {
+  -webkit-animation: inside 1s infinite;
+  -moz-animation: inside 1s infinite;
+  animation: inside 1s; }
+
+@keyframes prism {
+  0% {
+    fill: red; }
+  16% {
+    fill: orange; }
+  32% {
+    fill: yellow; }
+  48% {
+    fill: green; }
+  64% {
+    fill: blue; }
+  80% {
+    fill: green; }
+  100% {
+    fill: purple; } }
+
+@-webkit-keyframes prism {
+  0% {
+    fill: red; }
+  16% {
+    fill: orange; }
+  32% {
+    fill: yellow; }
+  48% {
+    fill: green; }
+  64% {
+    fill: blue; }
+  80% {
+    fill: green; }
+  100% {
+    fill: purple; } }
+
+@keyframes outside {
+  0% {
+    border-color: red; }
+  16% {
+    border-color: orange; }
+  32% {
+    border-color: yellow; }
+  48% {
+    border-color: green; }
+  64% {
+    border-color: blue; }
+  80% {
+    border-color: green; }
+  100% {
+    border-color: purple; } }
+
+@-webkit-keyframes outside {
+  0% {
+    border-color: red; }
+  16% {
+    border-color: orange; }
+  32% {
+    border-color: yellow; }
+  48% {
+    border-color: green; }
+  64% {
+    border-color: blue; }
+  80% {
+    border-color: green; }
+  100% {
+    border-color: purple; } }
+
+@keyframes inside {
+  0% {
+    background-color: red; }
+  16% {
+    background-color: orange; }
+  32% {
+    background-color: yellow; }
+  48% {
+    background-color: green; }
+  64% {
+    background-color: blue; }
+  80% {
+    background-color: green; }
+  100% {
+    background-color: purple; } }
+
+@-webkit-keyframes inside {
+  0% {
+    background-color: red; }
+  16% {
+    background-color: orange; }
+  32% {
+    background-color: yellow; }
+  48% {
+    background-color: green; }
+  64% {
+    background-color: blue; }
+  80% {
+    background-color: green; }
+  100% {
+    background-color: purple; } }
+
+/* General Styles */
+a {
+  text-decoration: none; }
+
+.backgroundContain {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto; }
+  .backgroundContain svg {
+    z-index: 0;
+    width: 100%; }
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 8%;
+  min-width: 800px;
+  max-width: 1000px;
+  width: 80%;
+  height: auto; }
+
+/* Name and Mail link */
+.name {
+  z-index: 4;
+  width: 290px;
+  height: 50px;
+  background-color: #000;
+  vertical-align: middle;
+  line-height: 48px;
+  padding: 0 30px 2px; }
+  .name h1 {
+    width: 215px;
+    display: inline-block;
+    letter-spacing: 1.5px;
+    font-size: 40px;
+    font-family: "ff-good-headline-web-pro-con";
+    color: #fff; }
+  .name a {
+    height: 23px; }
+    .name a img {
+      margin: 0 15px 0 5px;
+      width: 40px;
+      height: auto; }
+
+/* Twitter Feed */
+.twitter {
+  float: left;
+  position: relative;
+  margin-top: 100px;
+  width: 350px;
+  height: 350px;
+  border-radius: 350px;
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+  font-family: "adelle"; }
+  .twitter .atf-tweet-time {
+    text-decoration: underline;
+    float: none !important; }
+  .twitter .atf-user-card {
+    display: none !important; }
+  .twitter .twittersize {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 230px;
+    line-height: 22px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); }
+  .twitter .preg-links {
+    color: #b3b3b3; }
+    .twitter .preg-links:hover {
+      color: #d92929; }
+
+/* Menu */
+.menu {
+  position: relative;
+  float: right;
+  margin-top: 5%;
+  z-index: 8; }
+  .menu .button {
+    margin-top: 85px;
+    width: 250px;
+    height: 40px;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    position: relative; }
+    .menu .button h2 {
+      color: #fff;
+      vertical-align: middle;
+      letter-spacing: 1.5px;
+      font-size: 25px;
+      font-family: "ff-good-headline-web-pro-con";
+      line-height: 40px; }
+  .menu .selected {
+    width: 242px;
+    height: 32px;
+    border: 4px solid black;
+    background-color: #fff; }
+    .menu .selected h2 {
+      color: #000;
+      line-height: 32px; }
+
+/* Work List */
+.worklist {
+  height: auto;
+  width: 322px;
+  position: relative;
+  float: left;
+  margin-top: 130px;
+  padding: 10px;
+  border: 4px solid black;
+  background-color: #fff; }
+  .worklist .loader {
+    cursor: pointer; }
+  .worklist ul {
+    font-family: "adelle"; }
+    .worklist ul li {
+      margin: 20px 0;
+      font-size: 15px; }
+
+/* Work Examples */
+.contentHolder {
+  position: relative;
+  z-index: 10; }
+  .contentHolder .portimages {
+    position: absolute;
+    right: 0;
+    display: none;
+    margin-top: 50px;
+    width: 80%;
+    max-width: 1000px;
+    height: auto; }
+    .contentHolder .portimages img {
+      width: 100%;
+      z-index: 9;
+      margin-bottom: 30px; }
+  .contentHolder .portdescription {
+    position: absolute;
+    left: 0;
+    z-index: 11;
+    display: none;
+    margin-top: 50px;
+    width: 350px;
+    font-family: "adelle"; }
+    .contentHolder .portdescription a {
+      color: #b3b3b3; }
+      .contentHolder .portdescription a:hover {
+        color: #d92929; }
+    .contentHolder .portdescription .description {
+      padding: 15px;
+      width: 100%;
+      height: auto;
+      height: auto;
+      border: 4px solid black;
+      background-color: #fff; }
+      .contentHolder .portdescription .description h3 {
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 20px; }
+      .contentHolder .portdescription .description p {
+        font-size: 15px;
+        line-height: 22px; }
+
+/* Closer */
+.musicCloser, .closer {
+  margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #000;
+  cursor: pointer; }
+  .musicCloser p, .closer p {
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "ff-good-headline-web-pro-con";
+    line-height: 50px; }
+
+/* Soundcloud Player */
+.player {
+  display: none;
+  margin: 50px 0;
+  width: 100%; }
+
+/* Mobile Styles */
+@media screen and (max-width: 400px) {
+  .container {
+    min-width: 350px;
+    height: auto; }
+    .container .name {
+      margin: 0 auto; }
+    .container .twitter {
+      display: none !important; }
+    .container .contentHolder .portdescription {
+      margin-top: 10px;
+      position: relative;
+      opacity: 1 !important; }
+      .container .contentHolder .portdescription .description {
+        width: 312px; }
+    .container .contentHolder .portimages {
+      width: 100% !important; }
+      .container .contentHolder .portimages img {
+        margin-bottom: 5px;
+        z-index: 10; }
+    .container .portimages, .container .player {
+      position: absolute;
+      margin-top: 10px;
+      z-index: 10; }
+    .container .worklist {
+      float: none;
+      margin-top: 10px;
+      z-index: 10;
+      position: relative; }
+    .container .menu {
+      float: none;
+      width: 250px;
+      position: relative;
+      margin-bottom: 50px;
+      margin: 0px auto 50px;
+      z-index: 2; }
+      .container .menu .button {
+        margin-top: 30px; } }
