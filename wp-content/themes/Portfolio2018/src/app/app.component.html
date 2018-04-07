@@ -1,41 +1,29 @@
-<head>
-  <title>Thomas Cober's Design and Web Development portfolio</title>
-  <link rel="shortcut icon" href="">
-  <meta name="description" content="A design and development portfolio site for Thomas Cober of Minneapolis Minnesota. Works include front end development, illustration, layout, and graphic design examples." />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://use.typekit.net/blv1xtl.css">
-  <link rel="stylesheet" type="text/css" media="all" href="http://localhost:8888/wp-content/themes/Portfolio2018/style.css" />
-</head>
+<div class="container">
 
-<body>
-
-  <div class="container">
-
-    <div class="name">
-      <a href="mailto:tcober5@gmail.com">
-        <img src="../assets/mail.svg">
-      </a>
-      <h1>THOMAS&nbsp;COBER</h1>
-    </div>
-
-    <router-outlet></router-outlet>
-
-    <div class="menu">
-  
-        <div routerLink="work-list" class="design button">
-          <h2>WORK</h2>
-        </div>
-        
-        <div routerLink="soundcloud" class="music button">
-          <h2>MUSIC</h2>
-        </div>
-                 
-        <a href="https://github.com/tcober" target="_blank">
-          <div class="code button">
-            <h2>CODE</h2>
-          </div>
-        </a>
-        
-      </div>
+  <div class="name">
+    <a href="mailto:tcober5@gmail.com">
+      <img src="../assets/mail.svg">
+    </a>
+    <h1>THOMAS&nbsp;COBER</h1>
   </div>
-</body>
+
+  <router-outlet></router-outlet>
+
+  <div class="menu">
+
+      <div routerLink="work-list" class="design button">
+        <h2>WORK</h2>
+      </div>
+      
+      <div routerLink="soundcloud" class="music button">
+        <h2>MUSIC</h2>
+      </div>
+                
+      <a href="https://github.com/tcober" target="_blank">
+        <div class="code button">
+          <h2>CODE</h2>
+        </div>
+      </a>
+      
+    </div>
+</div>
