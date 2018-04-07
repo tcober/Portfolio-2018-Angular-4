@@ -5,8 +5,7 @@ import { PostsService } from '../posts.service';
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
-  styleUrls: ['./post-list.component.css'],
-  providers: [PostsService]
+  styleUrls: ['./post-list.component.css']
 })
 
 export class PostListComponent implements OnInit {
@@ -25,6 +24,10 @@ export class PostListComponent implements OnInit {
 
   ngOnInit() {
     this.getPosts();
+  }
+
+  setId(postId:any){
+    this.postsService.postId = "/" + postId;
   }
 
 }

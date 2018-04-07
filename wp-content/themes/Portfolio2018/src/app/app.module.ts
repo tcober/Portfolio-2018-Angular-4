@@ -8,6 +8,7 @@ import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { PostDisplayComponent } from './posts/post-display/post-display.component';
 import { TwitterComponent } from './posts/twitter/twitter.component';
 import { SoundcloudComponent } from './posts/soundcloud/soundcloud.component';
+import { PostsService} from './posts/posts.service'
 
 
 
@@ -25,7 +26,7 @@ import { SoundcloudComponent } from './posts/soundcloud/soundcloud.component';
     HttpModule,
     PortfolioRoutingModule
   ],
-  providers: [],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 

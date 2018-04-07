@@ -259,14 +259,13 @@ a { text-decoration: none; }
 }
 
 /* Work Examples */
-.contentHolder {
+.content-holder {
   position: relative;
   z-index: 10;
 
   .portimages {
     position: absolute;
     right: 0;
-    display: none;
     margin-top: 50px;
     width: 80%;
     max-width: 1000px;
@@ -283,7 +282,6 @@ a { text-decoration: none; }
     position: absolute;
     left: 0;
     z-index: 11;
-    display: none;
     margin-top: 50px;
     width: 350px;
     font-family: $body;
@@ -348,7 +346,7 @@ a { text-decoration: none; }
     .name { margin: 0 auto; }
     & .twitter { display: none!important; }
 
-    .contentHolder {
+    .content-holder {
       & .portdescription {
         margin-top: 10px;
         position: relative;

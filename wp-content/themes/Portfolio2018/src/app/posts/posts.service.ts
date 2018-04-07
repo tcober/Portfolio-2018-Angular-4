@@ -7,14 +7,20 @@ import { Post } from './post';
 @Injectable()
 export class PostsService {
   private postsUrl = "http://localhost:8888/wp-json/wp/v2/";
+  postId: string;
 
   constructor(private http: Http) { }
 
-  getPosts(): Observable<Post[]> {
-
-    return this.http
+  getPosts(postId?:any): Observable<Post[]> {
+    if(postId == undefined || postId == null) {
+      return this.http
       .get(this.postsUrl + 'posts')
       .map((res: Response) => res.json());
+    } else {
+      return this.http
+      .get(this.postsUrl + 'posts' + postId)
+      .map((res: Response) => res.json());
+    }
 
   }
 

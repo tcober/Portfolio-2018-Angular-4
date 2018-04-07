@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'work-list',
     component: PostListComponent,
     pathMatch: 'full'
+  },
+  { 
+    path: 'work-list/:id', 
+    component: PostDisplayComponent 
   }
 ];
 

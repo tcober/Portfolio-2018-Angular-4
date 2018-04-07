@@ -1,3 +1,25 @@
-<p>
-  post-display works!
-</p>
+<div class="content-holder">
+    <div class="portdescription">
+        <div class="closer" routerLink="/work-list">
+            <p>X </p>
+        </div>
+        
+        <div class="description">
+            <h3>{{post?.title?.rendered}}</h3> 
+            <div class="contentDescription">
+                <div class="aboutItem">
+                    <p [innerHTML]="post?.acf?.description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portimages">
+        <div class="pictures">
+            <img *ngIf="post?.acf?.image1 != false" src="{{post?.acf?.image1}}">
+            <img *ngIf="post?.acf?.image2 != false" src="{{post?.acf?.image2}}">
+            <img *ngIf="post?.acf?.image3 != false" src="{{post?.acf?.image3}}">
+            <img *ngIf="post?.acf?.image4 != false" src="{{post?.acf?.image4}}">
+        </div>
+    </div>
+</div>
