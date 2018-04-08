@@ -17,7 +17,7 @@ export class TwitterComponent implements OnInit {
 
   getTweets(){
     this.tweetsService
-      .getPosts()
+      .getTweets()
       .subscribe(res => {
         this.tweets = res;
       });
