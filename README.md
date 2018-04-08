@@ -7,4 +7,4 @@ A rebuild of my site with an Angular 4 front-end and the Wordpress API
 
 **Build:** `ng build --prod --deploy-url="/wp-content/themes/Portfolio2018/dist/"`
 
-**Sass** `grunt watch`
+**Sass:** `grunt watch`
