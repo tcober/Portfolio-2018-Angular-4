@@ -10,9 +10,13 @@ declare var $: any;
 })
 export class PostDisplayComponent implements OnInit {
 
-  post: Post[];
+  post: any;
+  title:string;
+  fader: boolean = false;
 
-  constructor( private postsService: PostsService ) { }
+  constructor( 
+    private postsService: PostsService,
+  ) { }
 
   getPosts(){
     this.postsService
@@ -25,6 +29,19 @@ export class PostDisplayComponent implements OnInit {
 
   ngOnInit() {
     this.getPosts();
+  }
+
+  ngAfterViewInit() {
+    setTimeout(function() {$('.content-holder').addClass('fadeIn') }, 200);
+    this.imageFader();
+  }
+
+  imageFader() {
+    $(".pictures img").one("load", function() {
+      $(this).addClass("fadeIn");
+    }).each(function() {
+      if(this.complete) $(this).load();
+    });
   }
 
   scrollSize() {

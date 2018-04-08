@@ -17,9 +17,9 @@ $bodyFontSize: 15px;
 
 /* Prism Animation */
 .diamondchange {
-  -webkit-animation:prism 1s infinite; /* Safari and Chrome */
-  -moz-animation:prism 1s infinite; /* Firefox */
-  animation:prism 1s;
+  animation-name: prism;
+  animation-duration: 230s;
+  animation-iteration-count: infinite;
 }
 
 .outside {
@@ -36,13 +36,15 @@ $bodyFontSize: 15px;
 
 @keyframes prism
 {
-0%   {fill:red;}
-16%  {fill:orange;}
-32%  {fill:yellow;}
-48%  {fill:green;}
-64%  {fill:blue;}
-80%  {fill:green;}
-100% {fill:purple;}
+0%   {fill:black;}
+14% {fill:purple;}
+25%  {fill:#4b0082;}
+37%  {fill:blue;}
+49%  {fill:green;}
+60%  {fill:yellow;}
+83%  {fill:orange;}
+90%   {fill:red;}
+100% {fill:black;}
 }
 
 @-webkit-keyframes prism
@@ -52,7 +54,7 @@ $bodyFontSize: 15px;
 32%  {fill:yellow;}
 48%  {fill:green;}
 64%  {fill:blue;}
-80%  {fill:green;}
+80%  {fill:#4b0082;}
 100% {fill:purple;}
 }
 
@@ -211,6 +213,10 @@ a { text-decoration: none; }
     text-align: center;
     cursor: pointer;
     position: relative;
+    
+    &:focus {
+      outline: 0;
+    }
 
     h2 {
       color: $color2;
@@ -245,6 +251,14 @@ a { text-decoration: none; }
   padding: 10px;
   border: 4px solid black;
   background-color: $color2;
+  opacity: 0;
+
+  &.fadeIn {
+    transition-property: opacity;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    opacity: 1;
+  }
 
   .loader { cursor: pointer; }
 
@@ -262,6 +276,18 @@ a { text-decoration: none; }
 .content-holder {
   position: relative;
   z-index: 10;
+  opacity: 0;
+  transform: translate(0px, -10px);
+  transform-origin: top right;
+
+  &.fadeIn {
+    transition-property: opacity, transform;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    transform-origin: top;
+  }
 
   .portimages {
     position: absolute;
@@ -271,11 +297,21 @@ a { text-decoration: none; }
     max-width: 1000px;
     height: auto;
 
-    img {
-      width: 100%;
-      z-index: 9;
-      margin-bottom: 30px;
+    .pictures{ 
+      img {
+        opacity: 0;
+        width: 100%;
+        z-index: 9;
+        margin-bottom: 30px;
+      }
+      .fadeIn {
+        opacity: 1;
+        transition-duration: .3s;
+        transition-property: opacity;
+        transition-timing-function: ease-in;
+      }
     }
+    
   }
 
   .portdescription {

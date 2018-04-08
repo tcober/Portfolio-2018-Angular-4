@@ -1,9 +1,8 @@
 <div class="worklist">
         
-<!-- <pre>{{posts | json}}</pre> -->
 <ul>
   <li class="loader" *ngFor="let post of posts">
-      <a routerLink="./{{post.title.rendered}}" (click)="setId(post.id)">{{ post.title.rendered }}</a>
+      <p routerLink="./{{post.title.rendered}}" (click)="setId(post.id);">{{ post.title.rendered }}</p>
   </li>
 </ul>
   

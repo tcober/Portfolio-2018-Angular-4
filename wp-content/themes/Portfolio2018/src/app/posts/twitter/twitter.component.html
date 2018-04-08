@@ -1,7 +1,6 @@
-<div class="twitter">
+<div *ngIf="tweets != undefined" class="twitter">
   <div class="twittersize">
-    <p>
-      Check Check 1212
-    </p>
+        <a href="https://twitter.com/ThomasCober/status/{{tweets[0].id_str}}">{{tweets[0].created_at | date:'mediumDate'}}</a>
+        <p>{{tweets[0].text}}</p>
   </div>
 </div>
